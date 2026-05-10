@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #E9832E;
+  --color-primary-dark: #C76E24;
+  --color-maroon: #A32020;
+  --color-navy: #0A1B2B;
+  --color-slate: #060E16;
+  --color-amber: #FDBA74;
+  --color-light: #F4F7FA;
+
+  --font-sans: "Inter", "Space Grotesk", sans-serif;
+  --font-heading: "Space Grotesk", "Inter", sans-serif;
+
+  --animate-fade-up: fade-up 0.5s ease-out;
+  --animate-float: float 3s ease-in-out infinite;
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@layer base {
+  body {
+    @apply bg-slate text-light font-sans antialiased overflow-x-hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading text-white;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-amber to-primary;
+    background-size: 200% auto;
+    animation: gradient-flow 5s linear infinite;
+  }
+  
+  .bg-industrial-grid {
+    background-image: 
+      linear-gradient(to right, rgba(233, 131, 46, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(233, 131, 46, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .bg-blueprint {
+    background-image: 
+      linear-gradient(rgba(10, 27, 43, 0.95), rgba(10, 27, 43, 0.95)),
+      linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 100% 100%, 20px 20px, 20px 20px;
+  }
+
+  .glass-card {
+    @apply bg-navy/60 backdrop-blur-md border border-white/10 rounded-xl;
+  }
+  
+  .glass-card-hover {
+    @apply hover:border-primary/50 hover:shadow-[0_0_20px_rgba(233,131,46,0.2)] transition-all duration-300;
+  }
+
+  .orange-glow {
+    box-shadow: 0 0 40px rgba(233, 131, 46, 0.2);
+  }
+}
+
+@keyframes gradient-flow {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
