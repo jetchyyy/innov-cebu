@@ -10,7 +10,7 @@ export default function Contact() {
 
       <section className="relative py-20 border-b border-white/10 overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-[500px] bg-gradient-to-b from-primary/10 to-transparent pointer-events-none z-0"></div>
-        
+
         <div className="container mx-auto px-6 relative z-10">
           <FadeUp className="text-center mb-16">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight text-white">Get in <span className="text-gradient">Touch</span></h1>
@@ -24,7 +24,7 @@ export default function Contact() {
             <FadeUp delay={0.1}>
               <div className="bg-navy/80 backdrop-blur-md p-10 rounded-2xl border border-white/10 h-full flex flex-col">
                 <h2 className="text-3xl font-bold text-white mb-8">Contact Information</h2>
-                
+
                 <div className="space-y-8 flex-grow">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0 border border-primary/20">
@@ -33,21 +33,22 @@ export default function Contact() {
                     <div>
                       <h4 className="text-white font-bold mb-1">Headquarters</h4>
                       <p className="text-light/70 leading-relaxed">
-                        123 Industrial Tech Park,<br />
+                        Door 3 J Lim Bldg. P Remedio St. Cabancalan,<br />
                         Mandaue City, Cebu,<br />
                         Philippines 6014
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0 border border-primary/20">
                       <Phone className="w-6 h-6 text-primary" />
                     </div>
                     <div>
                       <h4 className="text-white font-bold mb-1">Phone</h4>
-                      <p className="text-light/70">+63 (32) 123 4567</p>
-                      <p className="text-light/70">+63 917 123 4567</p>
+                      <p className="text-light/70">
+                        (032) 326 1950</p>
+
                     </div>
                   </div>
 
@@ -57,8 +58,8 @@ export default function Contact() {
                     </div>
                     <div>
                       <h4 className="text-white font-bold mb-1">Email</h4>
-                      <p className="text-light/70">info@innovativecontrols.com.ph</p>
-                      <p className="text-light/70">sales@innovativecontrols.com.ph</p>
+                      <p className="text-light/70">marlo.desquitado@innovcebu.com</p>
+
                     </div>
                   </div>
                 </div>
@@ -75,7 +76,7 @@ export default function Contact() {
             <FadeUp delay={0.2}>
               <div className="glass-card p-10 h-full">
                 <h2 className="text-3xl font-bold text-white mb-8">Send an Inquiry</h2>
-                
+
                 <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
